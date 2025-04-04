@@ -316,14 +316,16 @@
         
         .calculator-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center; /* This centers the contents */
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 40px; /* Adds spacing between left and right boxes */
+            padding: 0 20px; /* Adds horizontal padding inside the container */
         }
         
         .calculator, .quote-form {
             flex: 1;
             min-width: 300px;
+            max-width: 500px; /* This keeps the boxes from stretching too far */
             background-color: white;
             border-radius: 8px;
             padding: 30px;
@@ -438,9 +440,11 @@
         
         .contact-flex-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: flex-start;
             gap: 40px;
+            flex-wrap: wrap;
+            padding: 0 20px; /* Adds side padding for breathing room */
         }
         
         .contact-text {
