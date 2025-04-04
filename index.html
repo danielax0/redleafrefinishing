@@ -80,14 +80,30 @@
         
         /* Hero Section */
         .hero {
-            background-color: var(--slate-grey);
+            position: relative;
             color: white;
-            padding: 60px 0;
             text-align: center;
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/api/placeholder/1200/500');
+            padding: 60px 0;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('deck-background.jpg');
             background-size: cover;
             background-position: center;
+            filter: brightness(35%) blur(2px);
+            z-index: 0;
+        }
+        
+        .hero > .container {
             position: relative;
+            z-index: 1;
         }
         
         .hero h1 {
@@ -102,6 +118,7 @@
             max-width: 700px;
             margin: 0 auto 30px;
         }
+
         
         .btn {
             display: inline-block;
